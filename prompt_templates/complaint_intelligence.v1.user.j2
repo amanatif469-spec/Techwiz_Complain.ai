@@ -1,0 +1,27 @@
+Complaint ID: {{ complaint_id }}
+Customer type: {{ customer_type }}
+Channel: {{ channel }}
+Product/service: {{ product_or_service }}
+Order reference: {{ order_reference }}
+Requested resolution: {{ requested_resolution }}
+Previous complaint reference: {{ previous_complaint_reference }}
+Repeat/unresolved context: {{ repeat_context }}
+Prompt version: {{ prompt_version }}
+
+{{ wrapped_complaint }}
+
+Approved policy excerpts (source-grounded; cite only these):
+{% for chunk in policy_chunks %}
+- {{ chunk.document_code }} v{{ chunk.version }} status={{ chunk.status }} heading={{ chunk.heading }} section={{ chunk.section }} page={{ chunk.page_number }}
+  {{ chunk.content }}
+{% endfor %}
+
+Configurable categories: {{ categories }}
+Configurable departments: {{ departments }}
+
+JSON schema keys you must populate:
+complaint_id, primary_issue, secondary_issues, issue_category, subcategory, sentiment, emotion_indicators,
+urgency, priority, department, supporting_departments, entities, policy_id, policy_section, policy_applicability,
+resolution_steps, escalation_required, escalation_level, escalation_reason, escalation_notes, response_type,
+customer_response, follow_up_required, follow_up_communication, clarification_questions, missing_information,
+complaint_summary, agent_guidance, refund_eligible, replacement_eligible, compensation_recommended
