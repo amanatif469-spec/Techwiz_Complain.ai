@@ -1,0 +1,11 @@
+"""NimbusCarta Safety Policy SAF-POL-01
+Version 1.0
+
+Section 1.1 Overheating
+If a customer reports overheating, a burning smell, sparks, smoke, or fire risk, treat the case as critical.
+Instruct the customer to unplug the device and stop using it. Escalate immediately to the Safety department.
+Do not tell the customer to keep using the device. Sentiment is irrelevant.
+
+Section 1.4 Injury
+Shock, burns, or injury reports require critical management escalation and an incident record.
+"""

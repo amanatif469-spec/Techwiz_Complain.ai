@@ -1,0 +1,16 @@
+"""NimbusCarta Delivery Policy DEL-POL-04
+Version 1.0
+Effective date: 2026-01-01
+
+Section 5.2 Delayed delivery
+Agents must verify shipment status in carrier tracking before quoting an arrival window.
+Automatic compensation is not permitted. If eligibility conditions in the compensation matrix are met,
+a supervisor may approve a shipping credit.
+
+Section 6.1 Lost shipment
+Open a carrier investigation. After investigation, offer replacement or refund according to the refund policy.
+Do not guarantee next-day delivery.
+
+Section 7.0 Wrong item
+Arrange reverse pickup and ship the correct SKU. Customers are not entitled to keep both items by default.
+"""
