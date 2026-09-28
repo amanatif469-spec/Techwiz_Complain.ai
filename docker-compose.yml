@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: supportnova
+      POSTGRES_PASSWORD: supportnova
+      POSTGRES_DB: supportnova
+    ports:
+      - "5432:5432"
+    volumes:
+      - supportnova_pg:/var/lib/postgresql/data
+
+volumes:
+  supportnova_pg:

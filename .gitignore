@@ -1,0 +1,28 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+uploads/
+*.log
+.idea/
+.vscode/
+dist/
+build/
+alembic/versions/__pycache__/
+
+# Database
+supportnova.db
+*.db
+
+# Frontend env
+frontend/.env
+
+# Nested duplicate folder
+Techwiz7-Generative_AI-main/
