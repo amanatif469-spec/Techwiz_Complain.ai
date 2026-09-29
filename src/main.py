@@ -27,12 +27,15 @@ logger = logging.getLogger("supportnova")
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
-    Base.metadata.create_all(bind=engine)
-    db = SessionLocal()
     try:
-        seed_reference_data(db)
-    finally:
-        db.close()
+        Base.metadata.create_all(bind=engine)
+        db = SessionLocal()
+        try:
+            seed_reference_data(db)
+        finally:
+            db.close()
+    except Exception as exc:
+        logger.warning("Database setup or seeding encountered an error during startup: %s", exc)
     yield
 
 
